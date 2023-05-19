@@ -6,8 +6,30 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+.app {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+.hover-button {
+  font-size: 20px;
+  height: 15vh;
+  width: 20vw;
+  background-color: #f7f9;
+  border: 3px solid #d6d6d6;
+}
+
+.tooltip-container {
+}
+
+.tooltip {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10vh;
+  width: 15vw;
 }
