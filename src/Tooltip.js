@@ -1,15 +1,13 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
 const Tooltip = ({ text, position, children }) => {
   const [isHovered, setIsHovered] = useState(false);
 
   const handleMouseEnter = () => {
-    console.log("hiuvsdvds");
     setIsHovered(true);
   };
 
   const handleMouseLeave = () => {
-    console.log("hiu");
     setIsHovered(false);
   };
 
