@@ -23,9 +23,6 @@ body {
   border: 3px solid #d6d6d6;
 }
 
-.tooltip-container {
-}
-
 .tooltip {
   display: flex;
   justify-content: center;
