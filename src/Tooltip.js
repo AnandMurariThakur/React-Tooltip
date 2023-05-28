@@ -1,17 +1,20 @@
 import { useState } from "react";
 
 const Tooltip = ({ text, position, children }) => {
+  // State to track the hover state of the tooltip
   const [isHovered, setIsHovered] = useState(false);
 
+  // Event handler for mouse enter event
   const handleMouseEnter = () => {
     setIsHovered(true);
   };
 
+  // Event handler for mouse leave event
   const handleMouseLeave = () => {
     setIsHovered(false);
   };
 
-  //we have added this function to check the position for tooltip that we have passed as props here and add styling to our tooltip to set positioned as per requirement
+  // Function to determine the positioning of the tooltip based on the provided position prop
   const getTooltipPositionStyle = () => {
     switch (position) {
       case "top":
@@ -31,12 +34,11 @@ const Tooltip = ({ text, position, children }) => {
     <div
       className="tooltip-container"
       style={{ position: "relative", display: "inline-block" }}
-      // React has provided the following event handlers for detecting the hover state for an element
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
       {children}
-      {/* handled the tooltip with isHovered state */}
+      {/* Render the tooltip when hovered */}
       {isHovered && (
         <div
           className="tooltip"

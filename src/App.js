@@ -5,7 +5,7 @@ const App = () => {
 
   return (
     <div className="app">
-      {/* passing text and position as the props to our tooltip component*/}
+      {/* Iterate over the positions array and create a Tooltip component for each position */}
       {positions.map((position, index) => {
         return (
           <Tooltip
@@ -13,7 +13,7 @@ const App = () => {
             text="This tooltip is at"
             position={`${position}`}
           >
-            {/* here button is acting as our children for our component */}
+            {/* Render a button as the children of the Tooltip component */}
             <button className="hover-button">
               Hover over me to check tooltip at {`${position}`}
             </button>
